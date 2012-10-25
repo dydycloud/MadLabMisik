@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <title>Madlab</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body style="padding-top: 35px;">
 <div class="page secondary">
     <div class="page-header">
         <div class="page-header-content">
         	<h1>
         		<span class="fg-color-blueLight">Mad </span>
-        		<span class="fg-color-orangeDark">Lab</span>
-        		<span class="fg-color-red">Misik</span>  
+        		<span class="fg-color-orange">Lab</span>
+        		<span class="fg-color-orangeDark">Misik</span>
+            <p class="fg-color-red" id="subhead">Puff, Bokit & Hip Hop !!</p>
+            <p>
+              <%= link_to 'Home', root_path, :class => "fg-color-blueLight" %> | 
+              <%= link_to 'About', root_path, :class => "fg-color-orange" %> | 
+              <%= link_to 'Contact', root_path, :class => "fg-color-orangeDark" %> | 
+              <%= link_to 'Backoff', posts_path, :class => "fg-color-red" %> |
+            </p>  
         	</h1>
         </div>
     </div>
-
     <div class="page-region">
         <div class="page-region-content">
+          <br>
             <%= yield %>
         </div>
     </div>

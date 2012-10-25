@@ -1,7 +1,8 @@
 Madlab::Application.routes.draw do
-  get "home/index"
 
   resources :posts
+
+  resources :home
 
   root :to => 'home#index'
 end

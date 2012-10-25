@@ -12,3 +12,13 @@
  *= require_tree .
  */
 @import url(http://fonts.googleapis.com/css?family=Nosifer|Ceviche+One);
+
+#subhead{
+	font-family: 'Ceviche One', cursive;
+	font-size: 22px;
+}
+
+#centerhead{
+	text-align: center;
+	font-family: 'Nosifer', cursive;
+}
