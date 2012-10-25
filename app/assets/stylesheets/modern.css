@@ -1458,13 +1458,13 @@ ol.unstyled,
   width: 33.33%;
   height: 100%;
   float: left;
-  border-right: 1px #ccc solid;
+  padding: 5px;
 }
 .page.fill {
   width: 66.66%;
   height: 100%;
   float: right;
-  border-left: 1px #ccc solid;
+  padding: 5px;
 }
 .page.snapped .page .page-header .page-header-content h1,
 .page.snapped .page .page-header .page-header-content h2,
