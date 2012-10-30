@@ -1,5 +1,5 @@
 <div class="page snapped">
-   <%= image_tag('bg.jpg', :width => 420) %>
+   <%= image_tag(@post.image.url, :width => 420) %>
    <p><strong>By : <%= @post.name %></strong></p>
    <p><strong><%= @post.created_at.to_formatted_s(:long)   %></strong></p>
 </div>
