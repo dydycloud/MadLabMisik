@@ -1,3 +1,5 @@
+<%= will_paginate @posts %>
+<br>
 <% @posts.each do |post| %>
 	<div class="tile content <%= cycle("bg-color-orangeDark", "bg-color-red", "bg-color-orange", "bg-color-blueLight") -%>">
         <%= image_tag('bg.jpg', :width => 200, :class => "place-right")%>
@@ -7,3 +9,4 @@
         <p><%= link_to 'Read', home_path(post) %></p>
     </div>
 <% end %>
+

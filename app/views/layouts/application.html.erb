@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body style="padding-top: 35px;">
 <div class="page secondary">
@@ -17,8 +18,8 @@
             <p class="fg-color-red" id="subhead">Puff, Bokit & Hip Hop !!</p>
             <p>
               <%= link_to 'Home', root_path, :class => "fg-color-blueLight" %> | 
-              <%= link_to 'About', root_path, :class => "fg-color-orange" %> | 
-              <%= link_to 'Contact', root_path, :class => "fg-color-orangeDark" %> | 
+              <%= link_to 'About', '/static_pages/about', :class => "fg-color-orange" %> | 
+              <%= link_to 'Contact', '/static_pages/contact', :class => "fg-color-orangeDark" %> | 
               <%= link_to 'Backoff', posts_path, :class => "fg-color-red" %> |
             </p>  
         	</h1>
