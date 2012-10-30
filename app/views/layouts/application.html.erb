@@ -19,8 +19,18 @@
             <p>
               <%= link_to 'Home', root_path, :class => "fg-color-blueLight" %> | 
               <%= link_to 'About', '/static_pages/about', :class => "fg-color-orange" %> | 
-              <%= link_to 'Contact', '/static_pages/contact', :class => "fg-color-orangeDark" %> | 
-              <%= link_to 'Backoff', posts_path, :class => "fg-color-red" %> |
+              <%= link_to 'Contact', '/static_pages/contact', :class => "fg-color-orangeDark" %>
+              
+              <% if user_signed_in? %>
+                 | Signed in as <%= current_user.name %> || 
+                <%= link_to ' Back office', posts_path, :class => "fg-color-red" %> |
+                <%= link_to "Edit profil", '/users/edit'   %> |
+                . Not you?
+                <%= link_to "Sign out", destroy_user_session_path %> 
+              <% else %>
+                
+              <% end %>
+                           
             </p>  
         	</h1>
         </div>
@@ -28,6 +38,8 @@
     <div class="page-region">
         <div class="page-region-content">
           <br>
+            <p class="notice fg-color-green"><%= notice %></p>
+            <p class="alert fg-color-red"><%= alert %></p>
             <%= yield %>
         </div>
     </div>
